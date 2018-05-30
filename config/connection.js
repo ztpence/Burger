@@ -20,4 +20,4 @@ connection.connect(function(err){
     console.log('mysql connected w/ id ' + connection.threadId);
 });
 
-module.export = connection;
+module.exports = connection;
