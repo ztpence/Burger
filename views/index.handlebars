@@ -1,0 +1,42 @@
+<div class="container">
+
+<div class="row">
+        <div class="col-12" id= "burgerPic" style="margin-left:300px; padding:50px;">
+            <img src="http://www.clker.com/cliparts/5/3/f/4/1194986284683051133burger_http_www.treebuil_.svg.hi.png" alt="burger" id="burgerImage" style="width: 300px">
+            <h2 style= "margin-left:40px;">Eat-Da-Burger!</h2>
+        </div>
+</div>
+        <!-- adding burgers to eat-->
+    <div class="row">
+        <div class="col-12" style="margin-left:300px; padding:50px;">
+            <h4 style="margin-left:80px">Add a Burger!</h4>
+
+            <form class="hamburger">
+                <div class="burgerForm">
+                    <label for="name" style="font-size:large;"> Enter any burger you would like to eat, and Devoure It!</label>
+                    <br>
+                    <input type="text" class="formInfo" name="burger_name" id="burgerEntered" aria-describedby="burgerNeeded" style="margin-left:65px;" placeholder="Enter a delicious burger">
+                </div>
+            </form>
+            <button type="submit" id="submit" class="btn btn-info" style="margin-left:115px;" >Submit</button>
+        </div>
+    </div>
+        <!-- Burgers list to eat-->
+    <div class="row">
+        <div class="col-6">
+            <h4 style="margin-left:80px;">Burgers to Eat</h4>
+            <ul style="font-size:medium; margin-left: 60px;">
+                {{#each burgers}} {{#unless this.devoured}} 
+                
+                        {{this.id}}. {{this.burger_name}}
+
+                        <form class="burgerEaten" data-id="{{this.id}}">
+                                <input type="hidden" name="devoured" data-value="true">
+                        <button data-devourId="{{this.id}}" class="btn btn-info" class="devour" style="margin:5px;">Devour this burger!</button>
+                </form> 
+                
+                {{/unless}} {{/each}}
+            </ul>
+        </div>
+    </div>
+            
