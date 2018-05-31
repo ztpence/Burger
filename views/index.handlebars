@@ -38,5 +38,19 @@
                 {{/unless}} {{/each}}
             </ul>
         </div>
+    <!--Burgers eaten-->
+        <div class="col-6">
+            <h4 style="margin-left:80px;">Devoured Burgers...</h4>
+                <ul style="font-size:large; margin-left: 80px;">
+                
+                    {{#each burgers}} {{#if this.devoured}} 
+                
+                    {{this.id}}. {{this.burger_name}} 
+                <br>
+                    {{/if}} {{/each}}
+                
+                </ul>
+        </div>
     </div>
+</div>
             
