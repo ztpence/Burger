@@ -55,7 +55,7 @@
 </div>
 
 <script>
-    console.log("ready")
+    
     $('#submit').on("click", function (event) {
         event.preventDefault();
         console.log('event listener worked');
@@ -70,6 +70,23 @@
                 
                 location.reload();
                 console.log('new burger created');
+            }
+        );
+    });
+
+    $('.burgerEaten').on('click', function (event) {
+        event.preventDefault();
+        var burgerInfo = {
+            data: true,
+            id: $(this).data('id')
+        };
+        console.log('burgerInfo: ', burgerInfo);
+        $.ajax('/burgers/update', {
+            type: 'PUT',
+            data: burgerInfo
+        }).then(
+            function () {
+                location.reload();
             }
         );
     });
