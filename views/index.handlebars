@@ -53,4 +53,25 @@
         </div>
     </div>
 </div>
+
+<script>
+    console.log("ready")
+    $('#submit').on("click", function (event) {
+        event.preventDefault();
+        console.log('event listener worked');
+        var newBurger = {
+            burger_name: $('#burgerEntered').val().trim(),
+        };
+        $.ajax('/burgers/create', {
+            type: 'POST',
+            data: newBurger
+        }).then(
+            function () {
+                
+                location.reload();
+                console.log('new burger created');
+            }
+        );
+    });
+</script>
             
