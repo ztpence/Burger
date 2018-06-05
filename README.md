@@ -10,7 +10,7 @@ Eat-Da-Burger! allows a user input the names of burgers they'd like to eat. When
 
 Each burger creation in the waiting area can be devoured by the Devoure it button. When the user clicks it, the burger will move to the right side of the page indicating that the burger has now been devoured.
 
-<img src="/public/assets/images/addBeerSnip.PNG" >
+<img src="/public/assets/images/Eat-Da-Burger.PNG" >
 
 
 
