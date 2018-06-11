@@ -1,6 +1,6 @@
 # Burger
 
-Project can be found at - <a href="https://git.heroku.com/mighty-anchorage-21938.git">https://git.heroku.com/mighty-anchorage-21938.git</a>
+Project can be found at - <a href="https://mighty-anchorage-21938.herokuapp.com/">https://mighty-anchorage-21938.herokuapp.com/</a>
 
 Created By: Zane Pence
 
